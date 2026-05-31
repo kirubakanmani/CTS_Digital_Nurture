@@ -1,0 +1,17 @@
+import java.util.*;
+
+class GuessGame {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = (int)(Math.random() * 100) + 1;
+        int guess;
+
+        do {
+            guess = sc.nextInt();
+            if(guess > number) System.out.println("Too High");
+            else if(guess < number) System.out.println("Too Low");
+        } while(guess != number);
+
+        System.out.println("Correct!");
+    }
+}
